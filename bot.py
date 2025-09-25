@@ -193,7 +193,7 @@ async def accleft(interaction: discord.Interaction):
 
 @bot.tree.command(name="clear", description="Clear Accounts")
 async def clear(interaction: discord.Interaction):
-    if interaction.user.id != 1407262734084739102:
+    if interaction.user.id != 1403493273376391218:
         await interaction.response.send_message("Not Authorized")
         return
     await interaction.response.send_message("Cleared used accounts")
@@ -201,7 +201,7 @@ async def clear(interaction: discord.Interaction):
 
 @bot.tree.command(name="setdead", description="Set account dead by email")
 async def dead(interaction: discord.Interaction, email: str):
-    if interaction.user.id != 1407262734084739102:
+    if interaction.user.id != 1403493273376391218:
         await interaction.response.send_message("Not Authorized")
         return
     await interaction.response.send_message(f"Setting {email} dead")
@@ -209,7 +209,7 @@ async def dead(interaction: discord.Interaction, email: str):
 
 @bot.tree.command(name="upload", description="Upload a CSV file to MongoDB")
 async def upload(interaction: discord.Interaction, csv_file: discord.Attachment):
-    if interaction.user.id != 1407262734084739102:
+    if interaction.user.id != 1403493273376391218:
         await interaction.response.send_message("Not Authorized", ephemeral=True)
         return
     if not csv_file.filename.endswith(".csv"):
@@ -221,7 +221,7 @@ async def upload(interaction: discord.Interaction, csv_file: discord.Attachment)
 
 @bot.tree.command(name="aco", description="Uber Eats Auto Checkout with your own VCC")
 async def aco(interaction: discord.Interaction, order_info: str):
-    if interaction.user.id != 1407262734084739102:
+    if interaction.user.id != 1403493273376391218:
         await interaction.response.send_message("Not Authorized")
         return
 
@@ -301,7 +301,7 @@ class WalletButtons(View):
 
     @discord.ui.button(label="Load Credits", style=discord.ButtonStyle.green)
     async def load_credits(self, interaction: discord.Interaction, button: Button) -> None:
-        admin_ids: set[int] = {1407262734084739102}
+        admin_ids: set[int] = {1403493273376391218}
         if interaction.user.id in admin_ids:
             await interaction.response.send_modal(CreditInputModal())
         else:
