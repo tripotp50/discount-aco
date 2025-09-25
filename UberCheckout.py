@@ -44,7 +44,7 @@ headers = {
 }
 
 INTERACTION_API = "https://discord.com/api/v10/interactions"
-WOOLIX_CHANNEL = "https://discord.com/api/v10/channels/1406550397199319162/messages"
+WOOLIX_CHANNEL = "https://discord.com/api/v10/channels/1405975991322542130/messages"
 
 class TimeWindowSelect(discord.ui.View):
     def __init__(self, options):
@@ -408,7 +408,7 @@ def OTPInteraction(email):
     return {
         "type": 2,
         "application_id": "1386839434531438652",  # your bot's app ID
-        "channel_id": "1406550397199319162",      # Woolix channel ID
+        "channel_id": "1405975991322542130",      # Woolix channel ID
         "session_id": "66ee3d4285916d7ed81f9286a6a062bc",  # optional, can be left out
         "data": {
             "version": "1420614686013001771",     # ✅ updated
