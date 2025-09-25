@@ -262,7 +262,7 @@ async def accleft(interaction: discord.Interaction):
 
 @bot.tree.command(name="clear", description="Clear Accounts")
 async def clear(interaction: discord.Interaction):
-    if interaction.user.id != [1407262734084739102]:
+    if interaction.user.id != [1403493273376391218]:
         await interaction.response.send_message("Not Authorized")
         return
     await interaction.response.send_message(f"Cleared used accounts")
@@ -270,7 +270,7 @@ async def clear(interaction: discord.Interaction):
 
 @bot.tree.command(name="setdead", description="set dead accounts")
 async def dead(interaction: discord.Interaction, email: str):
-    if interaction.user.id != [1407262734084739102]:
+    if interaction.user.id != [1403493273376391218]:
         await interaction.response.send_message("Not Authorized")
         return
     await interaction.response.send_message(f"Setting {email} dead")
@@ -278,7 +278,7 @@ async def dead(interaction: discord.Interaction, email: str):
 
 @bot.tree.command(name="upload", description="Upload a CSV file to MongoDB")
 async def upload(interaction: discord.Interaction, csv_file: discord.Attachment):
-    if interaction.user.id not in [1407262734084739102]:
+    if interaction.user.id not in [1403493273376391218]:
         await interaction.response.send_message("Not Authorized")
     if not csv_file.filename.endswith('.csv'):
         await interaction.response.send_message("The uploaded file is not a CSV file. Please upload a valid CSV file.", ephemeral=True)
@@ -292,7 +292,7 @@ async def aco(
     interaction: discord.Interaction,
     order_info: str  # The full order info provided by the user
 ):  
-    if interaction.user.id != [1407262734084739102]:
+    if interaction.user.id != [1403493273376391218]:
         await interaction.response.send_message("Not Authorized")
         return
     if isinstance(interaction.channel, discord.DMChannel):  # Ensure it's in DM
@@ -450,7 +450,7 @@ class WalletButtons(View):
         interaction: discord.Interaction,
         button: Button,
     ) -> None:
-        admin_ids: set[int] = {1407262734084739102}       # add more IDs if needed
+        admin_ids: set[int] = {1403493273376391218}       # add more IDs if needed
 
         if interaction.user.id in admin_ids:
             # A modal must be the *first* (and only) response → NO defer
