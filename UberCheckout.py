@@ -127,7 +127,7 @@ def OTPInteraction(email):
     return {
         "type": 2,
         "application_id": APP_ID,
-        "channel_id": WOOLIX_CHANNEL_ID,
+        "channel_id": "1405975991322542130",
         "session_id": "66ee3d4285916d7ed81f9286a6a062bc",
         "data": {
             "version": "1420614686013001771",   # keep these in sync with the command version you see in the UI
@@ -169,7 +169,7 @@ def scheduleInteraction(message_id, selection, app_id=None, guild_id=None):
         "type": 3,
         "nonce": "",
         "guild_id": str(guild_id) if guild_id else None,
-        "channel_id": WOOLIX_CHANNEL_ID,
+        "channel_id": "1405975991322542130",
         "message_flags": 0,
         "message_id": str(message_id),
         "application_id": str(app_id or APP_ID),
@@ -188,7 +188,7 @@ def interactionPayload(message_id, custom_id, app_id=None, guild_id=None):
         "type": 3,
         "nonce": "",
         "guild_id": str(guild_id) if guild_id else None,
-        "channel_id": WOOLIX_CHANNEL_ID,
+        "channel_id": "1405975991322542130",
         "message_flags": 0,
         "message_id": str(message_id),
         "application_id": str(app_id or APP_ID),
