@@ -122,10 +122,10 @@ async def filterACO(session, userID, fare_data, emailAcc, tip):
             og_total = subtotal + delivery_fee + taxes
             # Construct the order breakdown embed
             embed = discord.Embed(
-                title="🍽️ MaxGains Delivery Order Details",
+                title="🍽️ DiscountPlug Delivery Order Details",
                 color=discord.Color.orange()
             )
-            embed.add_field(name="MaxGains🆔", value=f"`{userID}`", inline=False)
+            embed.add_field(name="DiscountPlug🆔", value=f"`{userID}`", inline=False)
             embed.add_field(name="🧾 UberEats Receipt", value="", inline=False)
             embed.add_field(name="Subtotal", value=f"${subtotal:.2f}", inline=True)
             embed.add_field(name="Promotion", value=f"-${promotion:.2f}", inline=True)
@@ -264,10 +264,10 @@ async def filterFare(interaction, session, userID, fare_data, emailAcc, tip):
             # Construct the order breakdown embed
             print("FilterFare - Constructing order breakdown embed")
             embed = discord.Embed(
-                title="🍽️ MaxGains Order Details",
+                title="🍽️ DiscountPlug Order Details",
                 color=discord.Color.orange()
             )
-            embed.add_field(name="MaxGains", value=f"`{userID}`", inline=False)
+            embed.add_field(name="DiscountPlug", value=f"`{userID}`", inline=False)
             embed.add_field(name="🧾 UberEats Receipt", value="", inline=False)
             embed.add_field(name="Subtotal", value=f"${subtotal:.2f}", inline=True)
             embed.add_field(name="Delivery Fee", value=f"${delivery_fee:.2f}", inline=True)
@@ -369,7 +369,7 @@ async def successOrderMsg(interaction, order_details, moneySaved):
         print("successOrderMsg - Address extracted:", address)
 
         # Add user ID
-        embed.add_field(name="MaxGains UUID:", value=str(interaction.user.id), inline=True)
+        embed.add_field(name="DiscountPlug UUID:", value=str(interaction.user.id), inline=True)
         print("successOrderMsg - UUID added:", str(interaction.user.id))
 
         # Log the final embed before sending
