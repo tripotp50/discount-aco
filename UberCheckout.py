@@ -5,7 +5,7 @@ import database
 import re
 from dotenv import load_dotenv
 import os
-import imap
+import imaplib
 from bypass import bypass
 
 load_dotenv()
