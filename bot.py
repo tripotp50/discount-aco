@@ -162,7 +162,7 @@ class OrderTypeView(discord.ui.View):
         if self.aco:
             await queue.put((True, interaction, self.order_link, self.cardNumber, self.expDate, self.cvv, self.email, "s25", self.zipCode))
         else:
-            await queue.put((False, interaction, self.order_link, "", "", "", "", "s25", "48127"))
+            await queue.put((False, interaction, self.order_link, "", "", "", "", "s25", "07002"))
         self.stop()
 
     @discord.ui.button(label="Cancel", style=discord.ButtonStyle.red)
